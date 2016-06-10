@@ -1,0 +1,134 @@
+
+@charset "utf-8";
+/* CSS Document */
+body {
+ color: $clr002;
+}
+.container-fluid {
+	width: 100%;
+}
+/*-- container --*/
+.container {
+	@include container(1150px, 0 auto, auto);
+	overflow: hidden;
+	margin-top: -104px;
+}
+ul.cont-ul {
+ @include liststyle(0, 0, none, auto, 60px, none);
+	display: inline-block;
+}
+ul.cont-ul li {
+ @include listli(left, 0, 0);
+}
+ul.cont-ul li a {
+ @include listlia(18px 30px, block, none, default, default, #eeedec);
+}
+ul.cont-ul li a.current, ul.cont-ul li a:hover {
+	background: #ed1f24;
+}
+.contract-filter {
+	border: solid 1px #c6c6c8;
+	padding: 38px 30px;
+	background: rgb(224,224,224);
+	background: -moz-linear-gradient(top, rgba(224,224,224,1) 0%, rgba(226,226,226,1) 12%, rgba(248,248,248,1) 44%, rgba(255,255,255,1) 60%, rgba(254,254,254,1) 71%, rgba(238,238,236,1) 99%, rgba(235,235,233,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(224,224,224,1) 0%, rgba(226,226,226,1) 12%, rgba(248,248,248,1) 44%, rgba(255,255,255,1) 60%, rgba(254,254,254,1) 71%, rgba(238,238,236,1) 99%, rgba(235,235,233,1) 100%);
+	background: linear-gradient(to bottom, rgba(224,224,224,1) 0%, rgba(226,226,226,1) 12%, rgba(248,248,248,1) 44%, rgba(255,255,255,1) 60%, rgba(254,254,254,1) 71%, rgba(238,238,236,1) 99%, rgba(235,235,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ebebe9', GradientType=0 );
+	min-height: 108px;
+}
+.contract-filter label {
+	font-size: 16px;
+	margin-left: 74px;
+}
+.contract-filter label:nth-child(1) {
+	margin-left: 0;
+}
+.contract-filter select {
+ @include selct(solid 1px #e3e3e3, 4px 8px, #fff, 125px);
+	color: #8b8b8b;
+	margin-left: 20px;
+}
+.contract-filter button {
+ @include buttn(0, #ed1f24, 3px 10px, 28px, 135px, #fff);
+	float: right;
+}
+.breadcrumb {
+ font-size: $fnt21;
+ margin-top: $mrgtp35p;
+ display: $disptbl;
+ width: $hundredpr;
+}
+.breadcrumb span {
+ font-size: $fnt12;
+ color: $clr8b8;
+ display: $dispbl;
+ margin: $mrgtpbt15p;
+}
+.landing_block {
+ @include landblock(20px 30px, #fff, 14px);
+ margin-bottom: $mrgbt40p;
+}
+.labelnos {
+	clear: both;
+ display: $disptbl;
+ width: $hundredpr;
+}
+.labelnos .label-1, .labelnos .label-2, .labelnos .label-3, .labelnos .label-4 {
+	width: 22%;
+	float: left;
+	margin-right: 25px;
+}
+.labelnos .label-4 {
+	width: 27%;
+	text-align: right;
+	margin-right: 0px;
+}
+.labelnos .label-4 a {
+ margin-right: $mrgt20p;
+}
+.labelnos .label-4 input[type="checkbox"] {
+ vertical-align: $valigntp;
+	margin-top: 2px;
+}
+.lab-title, .lab-subtitle {
+ font-size: $fnt24;
+ display: $disptbl;
+ width: $hundredpr;
+	margin-top: 20px;
+}
+.lab-title span {
+	float: left;
+ color: $clrff6;
+}
+.lab-title span:nth-child(2) {
+	float: right;
+ color: $clr002;
+}
+.lab-subtitle {
+	margin-top: 11px;
+ font-size: $fnt14;
+	margin-bottom: 20px;
+}
+.lab-subtitle span {
+	float: left;
+}
+.lab-subtitle span:nth-child(2) {
+	float: right;
+}
+.label-4 span.smll {
+ color: $clr9b9;
+ font-size: $fnt12;
+ display: $dispinbl;
+ margin-right: $mrgt20p;
+	text-align: left;
+}
+.land-prevnext {
+ margin-top: $mrgtp35p;
+ margin-bottom: $mrgbt40p;
+ text-align: $txtright;
+}
+.land-prevnext a {
+ @include buttn(solid 1px #9b9b9b, none, 12px 18px, auto, '', $clr002);
+	border-radius: 10px;
+	text-decoration: none;
+}

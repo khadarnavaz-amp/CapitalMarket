@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+a {
+	outline: none;
+}
+@font-face {
+	font-family: 'montserratlight';
+	src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'), url('../fonts/montserrat-light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/*-- variable declaration --*/
+$clr423: #423d3b;
+$clr002: #002841;
+$clr8b8: #8b8b8b;
+$clrff6: #ff696d;
+$clr9b9: #9b9b9b;
+$fntmont: 'montserratlight';
+$fnt12: 12px;
+$fnt14: 14px;
+$fnt21: 21px;
+$fnt24: 24px;
+$dispbl: block;
+$disptbl: table;
+$dispinbl: inline-block;
+$mrgtpbt15p: 15px 0;
+$mrgtp35p: 35px;
+$mrgt20p: 20px;
+$mrgbt40p: 40px;
+$hundredpr: 100%;
+$valigntp: top;
+$txtleft: left;
+$txtright: right;
+/*-- variable declaration --*/
+body {
+	font-size: 13px;
+ color: $clr423;
+	background-color: #f8f7f6 !important;
+ font-family: $fntmont;
+}
+@mixin selct($brd, $pad, $bg, $wdt) {
+ border: $brd;
+ padding: $pad;
+ background: $bg;
+ min-width: $wdt;
+}
+@mixin buttn($bord, $bg, $pad, $hgt, $wdt, $color) {
+ border: $bord;
+ background: $bg;
+ padding: $pad;
+ height: $hgt;
+ min-width: $wdt;
+ color: $color;
+}
+@mixin container($widt, $mrg, $hgt) {
+	width: $widt;
+	margin: $mrg;
+	height: $hgt;
+}
+/*-- custom ul li list mixin --*/
+@mixin liststyle($mrg, $pad, $styl, $widt, $heigt, $bg) {
+ margin: $mrg;
+ padding: $pad;
+ list-style: $styl;
+ width: $widt;
+ height: $heigt;
+ background: $bg;
+}
+@mixin listli ($flt, $mrg, $pad) {
+ float: $flt;
+ margin: $mrg;
+ padding: $pad;
+}
+@mixin listlia ($pad, $disp, $txtdec, $color, $fsize, $bg) {
+ padding: $pad;
+ display: $disp;
+ text-decoration: $txtdec;
+ color: $color;
+ font-size: $fsize;
+ background: $bg;
+}
+/*-- custom ul li list mixin --*/
+/*-- navigation styles --*/
+.header {
+	min-height: 75px;
+	background: rgb(225,225,225);
+	background: -moz-linear-gradient(top, rgba(225,225,225,1) 0%, rgba(227,227,227,1) 21%, rgba(245,245,245,1) 49%, rgba(251,251,251,1) 67%, rgba(250,250,250,1) 78%, rgba(243,243,243,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(225,225,225,1) 0%, rgba(227,227,227,1) 21%, rgba(245,245,245,1) 49%, rgba(251,251,251,1) 67%, rgba(250,250,250,1) 78%, rgba(243,243,243,1) 100%);
+	background: linear-gradient(to bottom, rgba(225,225,225,1) 0%, rgba(227,227,227,1) 21%, rgba(245,245,245,1) 49%, rgba(251,251,251,1) 67%, rgba(250,250,250,1) 78%, rgba(243,243,243,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e1e1', endColorstr='#f3f3f3', GradientType=0 );
+}
+.header .logo {
+	float: left;
+	margin: 24px;
+}
+.header ul.nav {
+ @include liststyle(0 55px, 0, none, auto, auto, none);
+	display: inline-block;
+}
+.header ul.nav li {
+ @include listli(left, 0, 0);
+}
+.header ul.nav li a {
+ @include listlia(25px, inline-block, none, #002841, 16px, none);
+}
+.header ul.nav li a.active, .header ul.nav li a:hover {
+	border-bottom: solid 2px #db5955;
+}
+/*-- navigation styles --*/
+@mixin landblock($pad, $bgclr, $fsize) {
+ padding: $pad;
+ background: $bgclr;
+ font-size: $fsize;
+}
+.pull-right {
+	float: right;
+}
+.filters {
+	float: right;
+	margin: 27px 20px;
+}
+.filters select {
+ @include selct(0, 0px 5px, none, 110px);
+	margin-right: 25px;
+	float: left;
+}
+.filters img, .filters a {
+	margin-right: 12px;
+	float: left;
+}
+.filters a:nth-child(1) {
+	margin-right: 0;
+}
+.banner {
+	width: 100%;
+	background: url(../images/land-banner.jpg) center top no-repeat;
+	height: 420px;
+	background-size: cover;
+	margin-top: -4px;
+}
+.container-fluid.footer .container {
+	margin-top: 0;
+	clear: both;
+ margin-bottom: $mrgbt40p;
+}
+.container-fluid.footer > .container > div {
+	float: left;
+	width: 50%;
+	padding-top: 10px;
+}
+.container-fluid.footer > .container > div:nth-child(2) {
+	text-align: right;
+	padding-top: 0;
+}

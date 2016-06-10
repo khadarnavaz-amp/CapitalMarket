@@ -1,0 +1,87 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: url(../images/login-bg.jpg) left top no-repeat;
+	background-size: cover;
+}
+/*-- mixins --*/
+@mixin center($width, $top, $textalign) {
+ font-size: 14px;
+ display: table;
+ margin: 0 auto;
+ margin-top: $top;
+ width: $width;
+ text-align: $textalign;
+}
+@mixin logboxdiv($mtop, $fsize, $txtalign) {
+ margin-top: $mtop;
+ font-size: $fsize;
+ text-align: $txtalign;
+}
+@mixin inpt($bord, $bgcolor, $padall, $bordrad, $color, $mrg) {
+ border: $bord;
+ background-color: $bgcolor;
+ padding: $padall;
+ border-radius: $bordrad;
+ color: $color;
+ margin: $mrg;
+}
+/*-- mixins --*/
+
+/*-- login form --*/
+.login-box {
+ @include center(360px, 100px, left);
+}
+.login-box div:nth-child(1) {
+ @include logboxdiv(0px, '', center);
+}
+.login-box div:nth-child(2) {
+ @include logboxdiv(41px, 30px, center);
+}
+.login-box div:nth-child(3) {
+ @include logboxdiv(46px, '', '');
+}
+.login-box div:nth-child(4) {
+ @include logboxdiv(24px, '', '');
+}
+.login-box div:nth-child(5) {
+ @include logboxdiv(15px, 12px, '');
+}
+.login-box div:nth-child(5) a, .login-box div:nth-child(7) a {
+	color: #423d3b;
+	text-decoration: none;
+}
+.login-box div:nth-child(6) {
+ @include logboxdiv(40px, '', center);
+}
+.login-box div:nth-child(7) {
+ @include logboxdiv(20px, '', center);
+	color: #827e7a;
+}
+.login-box div input {
+ @include inpt(solid 1px #c1beba, #fff, 9px 10px, 7px, #423d3b, 10px 0 0 0);
+	width: 100%;
+}
+.login-box div:nth-child(6) input[type="submit"] {
+ @include inpt(none, #f05a50 !important, 9px 10px, 2px, #fff, 0);
+	background: url(../images/log-lock.png) 40% 8px no-repeat;
+}
+.login-box div input[type="checkbox"] {
+ @include inpt(none, none, 0, 0, '', 0 5px 0 0);
+	width: auto;
+}
+
+/*-- login form --*/
+
+@media screen and (max-width: 480px) {
+.login-box {
+ @include center(80%, 100px, left);
+}
+.pull-right {
+	float: none;
+	display: table;
+	margin: 20px 0;
+}
+}
